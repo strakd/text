@@ -7,6 +7,7 @@
 //
 
 #import "KDNavigationController.h"
+#import "KDBaseControllerViewController.h"
 
 @interface KDNavigationController ()
 
@@ -23,6 +24,35 @@
     
     
 }
+
+
+- (void)pushViewController:(KDBaseControllerViewController*)viewController animated:(BOOL)animated{
+    
+    [super pushViewController:viewController animated:animated];
+    
+    //只给导航控制器以外的控制器
+    if (self.childViewControllers.count > 1) {
+        //给导航条设置左边的按钮
+        viewController.navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_backItem"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+        
+        
+    }
+    
+}
+
+
+//点击左边按钮返回
+
+- (void)back{
+    
+    [self popViewControllerAnimated:YES];
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
