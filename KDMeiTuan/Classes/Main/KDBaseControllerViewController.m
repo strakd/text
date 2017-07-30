@@ -14,6 +14,13 @@
 
 @implementation KDBaseControllerViewController
 
+//在push之前提前初始化目标控制器(HMBaseController)
+
+
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
