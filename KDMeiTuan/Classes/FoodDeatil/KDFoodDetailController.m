@@ -22,7 +22,7 @@
     self.view.backgroundColor = [UIColor orangeColor];
     
     //设置item
-    self.navItem.title = @"癞蛤蟆";
+    self.navItem.title = @"癞蛤蟆实物详情";
     
     
 }
