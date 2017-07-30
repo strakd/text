@@ -10,6 +10,8 @@
 		5E0554D11F2DF4A100B50FCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0554D01F2DF4A100B50FCE /* main.m */; };
 		5E0554DC1F2DF4A100B50FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */; };
 		5E0554DF1F2DF4A100B50FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0554DD1F2DF4A100B50FCE /* LaunchScreen.storyboard */; };
+		5E9B64D01F2E0358000336F4 /* KDShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64CF1F2E0358000336F4 /* KDShopController.m */; };
+		5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9B64D21F2E04E6000336F4 /* KDFoodDetailController.m */; };
 		5EEFEE671F2DFAD700BFB34A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE191F2DFAD700BFB34A /* AFHTTPSessionManager.m */; };
 		5EEFEE681F2DFAD700BFB34A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE1C1F2DFAD700BFB34A /* AFNetworkReachabilityManager.m */; };
 		5EEFEE691F2DFAD700BFB34A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE1E1F2DFAD700BFB34A /* AFSecurityPolicy.m */; };
@@ -54,6 +56,11 @@
 		5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E0554DE1F2DF4A100B50FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E0554E01F2DF4A100B50FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9B64CD1F2E00B9000336F4 /* KDMeiTuan.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMeiTuan.pch; sourceTree = "<group>"; };
+		5E9B64CE1F2E0358000336F4 /* KDShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDShopController.h; sourceTree = "<group>"; };
+		5E9B64CF1F2E0358000336F4 /* KDShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDShopController.m; sourceTree = "<group>"; };
+		5E9B64D11F2E04E6000336F4 /* KDFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDFoodDetailController.h; sourceTree = "<group>"; };
+		5E9B64D21F2E04E6000336F4 /* KDFoodDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDFoodDetailController.m; sourceTree = "<group>"; };
 		5EEFEE181F2DFAD700BFB34A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		5EEFEE191F2DFAD700BFB34A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		5EEFEE1A1F2DFAD700BFB34A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -168,9 +175,6 @@
 				5EEFEE8A1F2DFB9500BFB34A /* Common(分类) */,
 				5EEFEE161F2DFAB500BFB34A /* Lib(第三方框架) */,
 				5EEFEE121F2DFA3F00BFB34A /* Classes */,
-				5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */,
-				5E0554DD1F2DF4A100B50FCE /* LaunchScreen.storyboard */,
-				5E0554E01F2DF4A100B50FCE /* Info.plist */,
 				5E0554CF1F2DF4A100B50FCE /* Supporting Files */,
 				5EEFEE8B1F2DFC7B00BFB34A /* Other */,
 			);
@@ -180,7 +184,11 @@
 		5E0554CF1F2DF4A100B50FCE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E0554DB1F2DF4A100B50FCE /* Assets.xcassets */,
 				5E0554D01F2DF4A100B50FCE /* main.m */,
+				5E0554DD1F2DF4A100B50FCE /* LaunchScreen.storyboard */,
+				5E0554E01F2DF4A100B50FCE /* Info.plist */,
+				5E9B64CD1F2E00B9000336F4 /* KDMeiTuan.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -188,9 +196,9 @@
 		5EEFEE121F2DFA3F00BFB34A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5EEFEE151F2DFA3F00BFB34A /* Shop(点餐) */,
 				5EEFEE131F2DFA3F00BFB34A /* FoodDeatil(实物详情) */,
 				5EEFEE141F2DFA3F00BFB34A /* Main(主要的) */,
-				5EEFEE151F2DFA3F00BFB34A /* Shop(点餐) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -198,6 +206,8 @@
 		5EEFEE131F2DFA3F00BFB34A /* FoodDeatil(实物详情) */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B64D11F2E04E6000336F4 /* KDFoodDetailController.h */,
+				5E9B64D21F2E04E6000336F4 /* KDFoodDetailController.m */,
 			);
 			name = "FoodDeatil(实物详情)";
 			path = FoodDeatil;
@@ -214,6 +224,8 @@
 		5EEFEE151F2DFA3F00BFB34A /* Shop(点餐) */ = {
 			isa = PBXGroup;
 			children = (
+				5E9B64CE1F2E0358000336F4 /* KDShopController.h */,
+				5E9B64CF1F2E0358000336F4 /* KDShopController.m */,
 			);
 			name = "Shop(点餐)";
 			path = Shop;
@@ -423,6 +435,7 @@
 				5EEFEE811F2DFAD700BFB34A /* SDWebImagePrefetcher.m in Sources */,
 				5EEFEE6C1F2DFAD700BFB34A /* AFURLSessionManager.m in Sources */,
 				5EEFEE731F2DFAD700BFB34A /* NSArray+MASAdditions.m in Sources */,
+				5E9B64D31F2E04E6000336F4 /* KDFoodDetailController.m in Sources */,
 				5EEFEE691F2DFAD700BFB34A /* AFSecurityPolicy.m in Sources */,
 				5EEFEE821F2DFAD700BFB34A /* UIButton+WebCache.m in Sources */,
 				5EEFEE751F2DFAD700BFB34A /* View+MASAdditions.m in Sources */,
@@ -451,6 +464,7 @@
 				5EEFEE871F2DFAD700BFB34A /* UIImageView+WebCache.m in Sources */,
 				5EEFEE891F2DFAD700BFB34A /* UIView+WebCacheOperation.m in Sources */,
 				5E0554D11F2DF4A100B50FCE /* main.m in Sources */,
+				5E9B64D01F2E0358000336F4 /* KDShopController.m in Sources */,
 				5EEFEE711F2DFAD700BFB34A /* MASViewAttribute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

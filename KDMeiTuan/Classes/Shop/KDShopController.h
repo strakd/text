@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  KDShopController.h
 //  KDMeiTuan
 //
 //  Created by Starkda  on 2017/7/30.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface KDShopController : UIViewController
 
 @end
-

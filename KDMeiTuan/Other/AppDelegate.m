@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "KDShopController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //创建窗口
+    _window = [[UIWindow alloc] init];
+    
+    
+    //创建shop控制器
+    KDShopController *shopVC = [[KDShopController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shopVC];
+    
+    
+    //给窗口指定根控制器
+    _window.rootViewController = nav;
+    
+    
+    
+    //让窗口成为主窗口并可视
+    [_window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
