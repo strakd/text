@@ -1,54 +1,28 @@
 //
-//  KDShopController.m
+//  KDNavigationController.m
 //  KDMeiTuan
 //
 //  Created by Starkda  on 2017/7/30.
 //  Copyright © 2017年 Starkda . All rights reserved.
 //
 
-#import "KDShopController.h"
-#import "KDFoodDetailController.h"
+#import "KDNavigationController.h"
 
-@interface KDShopController ()
+@interface KDNavigationController ()
 
 @end
 
-@implementation KDShopController
+@implementation KDNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //设置导航控制器背景颜色
-    self.view.backgroundColor = [UIColor yellowColor];
-    
-    //设置导航条的标题
-    self.navItem.title = @"🐸青蛙";
+    //把导航控制器自带的导航条隐藏,隐藏是为了之后自己创建
+    self.navigationBar.hidden = YES;
     
     
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    
-    KDFoodDetailController *foodDeatilVC = [[KDFoodDetailController alloc] init];
-    
-    //设置push
-    [self.navigationController pushViewController:foodDeatilVC animated:YES];
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

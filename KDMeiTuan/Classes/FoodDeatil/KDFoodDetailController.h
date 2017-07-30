@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Starkda . All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "KDBaseControllerViewController.h"
 
-@interface KDFoodDetailController : UIViewController
+@interface KDFoodDetailController : KDBaseControllerViewController
 
 @end

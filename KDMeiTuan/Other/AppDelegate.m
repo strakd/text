@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KDShopController.h"
-
+#import "KDNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +27,7 @@
     //创建shop控制器
     KDShopController *shopVC = [[KDShopController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shopVC];
+    KDNavigationController *nav = [[KDNavigationController alloc] initWithRootViewController:shopVC];
     
     
     //给窗口指定根控制器
