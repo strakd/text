@@ -13,6 +13,7 @@
 
 @interface KDShopController ()
 @property (nonatomic, weak) UIView *shopHeaderView;
+@property (nonatomic, strong) UIBarButtonItem *rightBurronItem;
 
 @end
 
@@ -32,8 +33,17 @@
     //设置导航条的标题
     self.navItem.title = @"🐸青蛙点餐";
     
+    //设置导航标题文字颜色 为透明
+    
     //默认导航条的背景图片完全透明
     self.navBar.BGImageView.alpha = 0;
+    
+    //设置导航条右边分享按钮
+    _rightBurronItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_share"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navItem.rightBarButtonItem = _rightBurronItem;
+    self.navBar.tintColor = [UIColor whiteColor];
+    
+    
     
 }
 
