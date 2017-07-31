@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class KDNavigationBar;
 
 @interface KDBaseControllerViewController : UIViewController
 //导航条
-@property (nonatomic, strong) UINavigationBar *navBar;
+@property (nonatomic, strong) KDNavigationBar *navBar;
 //navItem
 @property (nonatomic, strong) UINavigationItem *navItem;
 @end

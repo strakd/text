@@ -7,6 +7,7 @@
 //
 
 #import "KDBaseControllerViewController.h"
+#import "KDNavigationBar.h"
 
 @interface KDBaseControllerViewController ()
 
@@ -19,7 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         //为每一个继承至此类的控制器都添加一个导航条
-        UINavigationBar *navBar = [[UINavigationBar alloc] init];
+        KDNavigationBar *navBar = [[KDNavigationBar alloc] init];
         
         
         //给导航条添加UINavigationItem

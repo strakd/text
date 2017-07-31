@@ -19,8 +19,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //把导航控制器自带的导航条隐藏,隐藏是为了之后自己创建
+    //把导航控制器自带的导航条隐藏掉
     self.navigationBar.hidden = YES;
+    
+    //把导航控制器自带的导航条隐藏,隐藏是为了之后自己创建 但是会禁用掉导航控制器自带侧滑POP功能
+//    self.navigationBar.hidden = YES;
     
     
 }

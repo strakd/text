@@ -50,6 +50,7 @@
 		5EEFEE881F2DFAD700BFB34A /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE641F2DFAD700BFB34A /* UIView+WebCache.m */; };
 		5EEFEE891F2DFAD700BFB34A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE661F2DFAD700BFB34A /* UIView+WebCacheOperation.m */; };
 		5EEFEE8E1F2DFC7B00BFB34A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFEE8D1F2DFC7B00BFB34A /* AppDelegate.m */; };
+		5EFACECB1F2E4A4A00E8F42B /* KDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFACECA1F2E4A4A00E8F42B /* KDNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,8 @@
 		5EEFEE661F2DFAD700BFB34A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		5EEFEE8C1F2DFC7B00BFB34A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EEFEE8D1F2DFC7B00BFB34A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EFACEC91F2E4A4A00E8F42B /* KDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDNavigationBar.h; sourceTree = "<group>"; };
+		5EFACECA1F2E4A4A00E8F42B /* KDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				5E9B64D51F2E0B1B000336F4 /* KDNavigationController.m */,
 				5E9B64D71F2E0B55000336F4 /* KDBaseControllerViewController.h */,
 				5E9B64D81F2E0B55000336F4 /* KDBaseControllerViewController.m */,
+				5EFACEC91F2E4A4A00E8F42B /* KDNavigationBar.h */,
+				5EFACECA1F2E4A4A00E8F42B /* KDNavigationBar.m */,
 			);
 			name = "Main(主要的)";
 			path = Main;
@@ -463,6 +468,7 @@
 				5EEFEE7D1F2DFAD700BFB34A /* SDWebImageDecoder.m in Sources */,
 				5EEFEE6D1F2DFAD700BFB34A /* MASCompositeConstraint.m in Sources */,
 				5EEFEE781F2DFAD700BFB34A /* NSData+ImageContentType.m in Sources */,
+				5EFACECB1F2E4A4A00E8F42B /* KDNavigationBar.m in Sources */,
 				5EEFEE7F1F2DFAD700BFB34A /* SDWebImageDownloaderOperation.m in Sources */,
 				5EEFEE6A1F2DFAD700BFB34A /* AFURLRequestSerialization.m in Sources */,
 				5EEFEE7B1F2DFAD700BFB34A /* SDImageCacheConfig.m in Sources */,

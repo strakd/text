@@ -8,6 +8,8 @@
 
 #import "KDShopController.h"
 #import "KDFoodDetailController.h"
+#import "KDNavigationBar.h"
+
 
 @interface KDShopController ()
 @property (nonatomic, weak) UIView *shopHeaderView;
@@ -30,6 +32,8 @@
     //设置导航条的标题
     self.navItem.title = @"🐸青蛙点餐";
     
+    //默认导航条的背景图片完全透明
+    self.navBar.BGImageView.alpha = 0;
     
 }
 
@@ -59,7 +63,6 @@
         make.height.offset(180);
     }];
     
-    _shopHeaderView = shopHeaderview;
     
     //添加平移
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
@@ -67,6 +70,10 @@
     
     //添加手势到控制器的view上
     [self.view addGestureRecognizer:pan];
+    
+    _shopHeaderView = shopHeaderview;
+    
+    
 }
 
 
@@ -79,7 +86,9 @@
     CGFloat shopHeaderViewUpdateHeight = _shopHeaderView.bounds.size.height;
     
     [_shopHeaderView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.offset(p.y + _shopHeaderView.bounds.size.height);
+        
+        
+//        make.height.offset(p.y + _shopHeaderView.bounds.size.height);
         
     //如果它当时的高度加上平移的值 <= 64 直接就让他变成到64
     if(p.y + shopHeaderViewUpdateHeight < 64){
@@ -99,10 +108,36 @@
     }];
 
     
+    CGFloat alpha = [self resultWithConsult:shopHeaderViewUpdateHeight andConsult1:64 andResult1:1 andConsult2:180 andResult2:0];
+    
+    self.navBar.BGImageView.alpha = alpha;
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //恢复到初始值
     [pan setTranslation:CGPointZero inView:pan.view];
     
+}
+
+
+
+
+//把通过二元一次计算透明度包装成小方法
+- (CGFloat)resultWithConsult:(CGFloat)consult andConsult1:(CGFloat)consult1 andResult1:(CGFloat)result1 andConsult2:(CGFloat)consult2 andResult2:(CGFloat)result2{
+    
+    CGFloat a = (result1 - result2) / (consult1 - consult2);
+    
+    CGFloat b = result1 - (a * consult1);
+    
+    
+    return a * consult + b;
 }
 
 
