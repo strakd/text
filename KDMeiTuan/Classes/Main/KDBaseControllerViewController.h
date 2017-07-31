@@ -14,4 +14,8 @@
 @property (nonatomic, strong) KDNavigationBar *navBar;
 //navItem
 @property (nonatomic, strong) UINavigationItem *navItem;
+
+//状态栏样式
+@property (nonatomic, assign) UIStatusBarStyle statrsBarStyle;
+
 @end

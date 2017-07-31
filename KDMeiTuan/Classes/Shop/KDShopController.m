@@ -34,6 +34,8 @@
     self.navItem.title = @"🐸青蛙点餐";
     
     //设置导航标题文字颜色 为透明
+    self.navBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithWhite:.4 alpha:0]};
+    
     
     //默认导航条的背景图片完全透明
     self.navBar.BGImageView.alpha = 0;
@@ -118,15 +120,31 @@
     }];
 
     
+    //计算导航条背景图片的透明度
     CGFloat alpha = [self resultWithConsult:shopHeaderViewUpdateHeight andConsult1:64 andResult1:1 andConsult2:180 andResult2:0];
     
     self.navBar.BGImageView.alpha = alpha;
     
     
+    //设置导航条标题文字颜色和掉焊条背景变化是一样的
+    self.navBar.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor colorWithWhite:.4 alpha:alpha]};
     
     
+    //计算分享按钮的白色值
+    CGFloat white = [self resultWithConsult:shopHeaderViewUpdateHeight andConsult1:64 andResult1:.4 andConsult2:180 andResult2:1];
+    
+    //设置分类按钮颜色
+    self.navBar.tintColor = [UIColor colorWithWhite:white alpha:1];
     
     
+    //如果当时是180高度就用白色状态栏,反之用黑色
+    if (shopHeaderViewUpdateHeight == 180 && self.statrsBarStyle != UIStatusBarStyleLightContent) {
+        self.statrsBarStyle = UIStatusBarStyleLightContent;
+        
+    }else if(shopHeaderViewUpdateHeight == 64 && self.statrsBarStyle != UIStatusBarStyleDefault){
+        self.statrsBarStyle = UIStatusBarStyleDefault;
+        
+    }
     
     
     
